@@ -2,33 +2,43 @@
 <?php
 session_start();
 include('../connect.php');
-$Alumniemail = mysqli_real_escape_string( $conn , $_POST['Aemail']);
+$Alumniemail = strtolower($_POST['Aemail']);
 $Alumnipassword = mysqli_real_escape_string( $conn , $_POST['Apassword']);
+
+if(isset($_POST['submit'])){
+$_SESSION['status']="Active";
 
 $sql="SELECT * FROM `alumni` WHERE `Aemail`='".$Alumniemail."'";
 
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
+$row = mysqli_fetch_assoc($result);
+
 if($resultCheck>0){
-    $row = mysqli_fetch_assoc($result);
-    //de-hashing the password
-  //
-    #fifth if
     if($Alumniemail == $row['Aemail']){
-		//	$hashedPwdCheck = password_verify($Alumnipassword , $row['Apassword']);
-			if($Alumnipassword == $row['Apassword']){
+			$hashedPwdCheck = password_verify($Alumnipassword , $row['Apassword']);
+			if($hashedPwdCheck== true){
+        $_SESSION['AID']= $row['ID'];
         $_SESSION['Alumniemail'] = $row['Aemail'];
-        $_SESSION['AlumniPassword'] = $row['Apassword'];
-        $_SESSION['Alumniname'] = $row['Aname'];
+        $_SESSION['Alumnipassword'] = $row['Apassword'];
+        $_SESSION['AlumniFname'] = $row['AFname'];
+        $_SESSION['AlumniLname'] = $row['ALname'];
+        $_SESSION['AlumniGender']=$row['Gender'];
         $_SESSION['AlumniCompany'] = $row['Acompany'];
         $_SESSION['AlumniDesignation'] = $row['Adesignation'];
-        $_SESSION['AlumniYear'] = $row['AgradYear'];
-        $_SESSION['AlumniMajor'] = $row['Amajor'];
+        $_SESSION['GradYear'] = $row['AgradYear'];
+        $_SESSION['AMajor'] = $row['Amajor'];
+        $_SESSION['PhoneNum'] = $row['phonenum'];
+        $_SESSION['checkbox'] = $row['checkbox'];
+        $_SESSION['checkbox'] = $row['checkbox'];
+        $_SESSION['roleMBRSG'] = $row['roleMBRSG'];
+        $_SESSION['biography'] = $row['biography'];
+        $_SESSION['AProfilePic'] = $row['Apicture'];
       //        $col=$_SESSION;
       //      print_r($col);
 
         header("Location: form2.php");
-        }
+    }
 			else{
         echo "wrong password";
 			}
@@ -37,6 +47,11 @@ if($resultCheck>0){
   else {
     echo "User doesn't exist";
   }
+}
+if(isset($_SESSION['logoutmsg']))
+echo $_SESSION['logoutmsg'];
+
+
 ?>
 <html lang="en">
   <head>
@@ -63,10 +78,42 @@ if($resultCheck>0){
         </div>        
         
 <div class="container" style="height:100vh;">
-    <a href="javascript:history.back()">
+<div class="topBanner">
+  <div><img src="assets/imgs/MBRGI_logo.png"></div>
+  <div><img src="assets/imgs/gov-logo.png"></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<a href="javascript:history.back()">
     <button type="button" class="btn btn-primary btn-lg" style="margin:1%;" >Back</button>
     </a>
-    <div class="test" style=" display:flex; justify-content: center; align-items: center;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <!--Navigation-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="Index.html"  >Update Profile</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="AA.html" >
+                                    Show Alumni
+                                </a>
+</li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="AAServices.html">Show Board Alumni</a>
+                                </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="Events.html" >
+                                    Change E-Mail
+                                </a>
+                            </li>
+                  
+                    </ul>
+                </div>
+            </nav>
+   
+    <div class="test" style=" display:flex; justify-content: center; align-items: center; margin-top:70px;">
     <div class="card text-center" style="width:50%; ">
         <div class="card-header">
        

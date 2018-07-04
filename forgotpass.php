@@ -3,12 +3,15 @@
 session_start();
 include('../connect.php');
 $emailPN = $_POST['emailPN'];
+
 $sql="SELECT * FROM `alumni` WHERE `Aemail`='".$emailPN."'";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 
-       $col=$_SESSION;
-      print_r($col);
+$col=$_SESSION;
+
+print_r($col);
+
 if($resultCheck>0){
   $_SESSION['Alumniemail'] = $emailPN;
   header("Location: changepass.php");
@@ -43,10 +46,42 @@ else{
         </div>        
         
 <div class="container" style="height:100vh;">
-    <a href="javascript:history.back()">
+<div class="topBanner">
+  <div><img src="assets/imgs/MBRGI_logo.png"></div>
+  <div><img src="assets/imgs/gov-logo.png"></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<a href="javascript:history.back()">
     <button type="button" class="btn btn-primary btn-lg" style="margin:1%;" >Back</button>
     </a>
-    <div class="test" style=" display:flex; justify-content: center; align-items: center;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <!--Navigation-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="Index.html"  >Update Profile</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="AA.html" >
+                                    Show Alumni
+                                </a>
+</li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="AAServices.html">Show Board Alumni</a>
+                                </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="Events.html" >
+                                    Change E-Mail
+                                </a>
+                            </li>
+                  
+                    </ul>
+                </div>
+            </nav>
+   
+    <div class="test" style=" display:flex; justify-content: center; align-items: center; margin-top:70px;">
     <div class="card text-center" style="width:50%; ">
         <div class="card-header">
        
@@ -54,7 +89,7 @@ else{
         <div class="card-body ">
           <h5 class="card-title">Forgot Your Password</h5>
           <p class="card-text">
-              <form action="changepass.php" method="POST">
+              <form action="forgotPass.php" method="POST">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Recovery Contact </label>
                     <input type="text" name="emailPIN" class="form-control"  placeholder="Enter your email or phone number" style="width:80%; margin:0 auto;">

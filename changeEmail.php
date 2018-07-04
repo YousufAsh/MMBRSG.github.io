@@ -1,15 +1,16 @@
 <!doctype html>
 <?php
-session_start();
 include('../connect.php');
 error_reporting(0);
 
+session_start();
+
 $Alumniemail = $_SESSION['Alumniemail'];
 $Alumnipassword = $_SESSION['Alumnipassword'];
+$Alumninewemail = strtolower($_POST['Alumninewemail']);
+$AlumniCurrentpassword = $_POST['AlumnicurrentPassword'];
 
-$Alumnienterpassword = $_POST['AlumnienterPassword'];
-$NewApassword = $_POST['NewAlumniPassword'];
-$Confirmpassword = $_POST['ConfirmNewAlumniPassword'];
+//print_r($_SESSION);
 if($_SESSION['status']!="Active"){
   header("location:login1.php");
 }
@@ -19,37 +20,39 @@ $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 $row = mysqli_fetch_assoc($result);
 
-
 if($resultCheck>0){
     if($_POST['submit']){
-      $hashedPwdCheck = password_verify($Alumnienterpassword , $row['Apassword']);
-			if($hashedPwdCheck== true){
-        if($NewApassword==$Confirmpassword){
-//          echo $_SESSION['Alumnipassword'];
-          $NewhashedPwd= password_hash($NewApassword, PASSWORD_DEFAULT);
-          $query="UPDATE `alumni` SET `Apassword`='".$NewhashedPwd."' WHERE `Aemail`='".$Alumniemail."'";
-          $_SESSION['Alumnipassword']=$NewhashedPwd;
-  //          echo $_SESSION['AlumniPassword'];
 
-          $result=mysqli_query($conn,$query);
-          if($result){
-            echo "Password changed successfully";
-          }
-        else{
-          echo "error";
-        }
-        }
-        else{
-          echo "passwords don't match";
-        }
+      $sql="SELECT * FROM `alumni` WHERE `Aemail`='".$Alumninewemail."'";
+      $result = mysqli_query($conn, $sql);
+      $resultCheck = mysqli_num_rows($result);
+
+      if($resultCheck>0){
+        echo "email already used!";
       }
       else{
-        echo "wrong password";
+        $hashedPwdCheck = password_verify($AlumniCurrentpassword , $row['Apassword']);
+  			if($hashedPwdCheck== true){
+          $_SESSION['Alumniemail']=$Alumninewemail;
+          print($_SESSION['Alumniemail']);
+          $query="UPDATE `alumni` SET `Aemail`='".$Alumninewemail."' WHERE `ID`='".$row['ID']."'";
+    //NOTICE: NEED TO ADD THE EMAIL TO BE VARIABLE BASED ON THE LOG IN, THIS WILL NEED SESSIONS
+          $result=mysqli_query($conn,$query);
+          if($result){
+              echo "Email changed successfully";
+            }
+            else{
+              echo "unexpected error";
+            }
+          }
+          else {
+            echo "error, incorrect password";
+          }
+        }
       }
-    }
 }
 else{
-  echo "account doesn't exist";
+  echo "email doesn't exist";
 }
 if(isset($_POST['ShowAlumni'])){
   header("Location: showAllAlumni.php");
@@ -69,8 +72,6 @@ if(isset($_POST['ShowBoardAlumni'])){
   if(isset($_POST['changeEmail'])){
     header("Location: changeEmail.php");
   }
-    mysqli_close($conn);
-print_r($_SESSION);
 }
 ?>
 
@@ -140,27 +141,28 @@ print_r($_SESSION);
        
         </div>
         <div class="card-body ">
-          <h5 class="card-title">Reset Password </h5>
+          <h5 class="card-title" style="padding-bottom:10px;">Change Email</h5>
           <p class="card-text">
-              <form action="ResetPass.php" method="POST">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Current Password: </label>
-                    <input type="password" name="AlumnienterPassword" class="form-control"  placeholder="Enter current password" style="width:80%; margin:0 auto;">
-                  </div>
-                  <div class="form-group">
-                      <label for="exampleInputEmail1">New Password: </label>
-                      <input type="password" name="NewAlumniPassword" class="form-control" style="width:80%; margin:0 auto;">
+              <form action="changeEmail.php" method="POST">
+                  <div class="form-group row" >
+                    <label class="col-sm-5 col-form-label">New Email:</label>
+                    <div class="col-sm-6">
+                    <input type="text" name="Alumninewemail" class="form-control" required>
                     </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Confirm New Password: </label>
-                    <input type="password" name="ConfirmNewAlumniPassword" class="form-control" style="width:80%; margin:0 auto;">
                   </div>
-                  <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+                  <div class="form-group row">
+                      <label class="col-sm-5 col-form-label">Password:</label>
+                      <div class="col-sm-6">
+                      <input type="Password" name="Alumnicurrentpassword" class="form-control" required>
+                    </div>
+                    </div>
+                    <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+
                 </form>
           </p>
         </div>
         <div class="card-footer text-muted">
-     
+
         </div>
       </div>
     </div>

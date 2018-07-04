@@ -1,4 +1,12 @@
 <!doctype html>
+<?php
+                      include('../connect.php');
+                      //error_reporting(0);
+                      session_start();
+                      print_r ($_SESSION);
+                      ?>
+
+            
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -137,28 +145,154 @@
                   <!-- Content changes -->
               
                   <div class="tab-pane fade show active content" role="tabpanel">
-                    
-                    
-                      <h1>Sapientem locupletat ipsa natura, cuius divitias Epicurus parabiles esse docuit.</h1>
+                  <div class="title">MBRSG AA Board Members</div> 
+                    <div class="board">
+               
+                    <?php
+                      $sql="SELECT * FROM `alumni`";
+                      $result = mysqli_query($conn, $sql);
+                     // echo "<tr><td colspan='2'><h3>Executive Board Members</h3></td></tr>";
+                      while ($row = mysqli_fetch_array($result)) {
+                        if($row['checkbox']=="Board"){
+                          $folder=$row['Apicture'];
+                          $AProfilePic= "<img src='".$folder."' height='120' width='100'/>";
+                          echo '<div class="member">';
+                          echo '<div class="profilePic"><img src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg"></div>';
+                          echo '<div class="row1"><b>'.$row['AFname'].' '.$row['ALname'].'</b></div>';
+                          echo '<div class="row1">'.$row['Amajor'].'</div>';
+                          echo '<div class="row1">'.$row['Adesignation'].', '.$row['Acompany'].'</div>';
+                          echo '
+                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin:0 auto; margin-top:5px;">
+                          Contact '.$row['AFname'].'
+                        </button>
 
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="http://loripsum.net/" target="_blank">Tum Triarius: Posthac quidem, inquit, audacius.</a> Ex ea difficultate illae fallaciloquae, ut ait Accius, malitiae natae sunt. <i>Si longus, levis.</i> Huic mori optimum esse propter desperationem sapientiae, illi propter spem vivere. <a href="http://loripsum.net/" target="_blank">Duo Reges: constructio interrete.</a> Minime vero probatur huic disciplinae, de qua loquor, aut iustitiam aut amicitiam propter utilitates adscisci aut probari. Erillus autem ad scientiam omnia revocans unum quoddam bonum vidit, sed nec optimum nec quo vita gubernari possit. Est autem a te semper dictum nec gaudere quemquam nisi propter corpus nec dolere. Persecutus est Aristoteles animantium omnium ortus, victus, figuras, Theophrastus autem stirpium naturas omniumque fere rerum, quae e terra gignerentur, causas atque rationes; Mihi enim erit isdem istis fortasse iam utendum. <mark>Ratio quidem vestra sic cogit.</mark> Sed si duo honesta proposita sint, alterum cum valitudine, alterum cum morbo, non esse dubium, ad utrum eorum natura nos ipsa deductura sit. <b>Multoque hoc melius nos veriusque quam Stoici.</b> </p>
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                  <form>
+                                      <div class="form-group row">
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" placeholder="Name*">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" id="inputPassword3" placeholder="Company*">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                          <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputPassword3" placeholder="Designation*">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-10">
+                                              <input type="text" class="form-control" id="inputPassword3" placeholder="Email*">
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                              <div class="col-sm-10">
+                                               <textarea rows="6" placeholder="Message*" style="width:100%;"></textarea>
+                                              </div>
+                                            </div>
+                                     
+                                      
                       
-                      <h2>Est enim effectrix multarum et magnarum voluptatum.</h2>
+                                    </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Send</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>';
+                          echo '</div>';
+                      }
+                      }
+                      ?>
+                                        <div class="title">MBRSG AA Honorary  Members</div> 
+                      <?php 
+                      $sql="SELECT * FROM `alumni`";
+                      $result = mysqli_query($conn, $sql);
+                     
+                      while ($row = mysqli_fetch_array($result)) {
+                        if($row['checkbox']=="Honor"){
+                          $folder=$row['Apicture'];
+                          $AProfilePic= "<img src='".$folder."' height='100' width='100'/>";
+                          echo '<div class="member">';
+                          echo '<div class="profilePic"><img src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg"></div>';
+                          echo '<div class="row1"><b>'.$row['AFname'].' '.$row['ALname'].'</b></div>';
+                          echo '<div class="row1">'.$row['Amajor'].'</div>';
+                          echo '<div class="row1">'.$row['Adesignation'].', '.$row['Acompany'].'</div>';
+                          echo '
+                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin:0 auto; margin-top:5px;">
+                          Contact '.$row['AFname'].'
+                        </button>
+
+                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                  <form>
+                                      <div class="form-group row">
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" placeholder="Name*">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" id="inputPassword3" placeholder="Company*">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                          <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputPassword3" placeholder="Designation*">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-10">
+                                              <input type="text" class="form-control" id="inputPassword3" placeholder="Email*">
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                              <div class="col-sm-10">
+                                               <textarea rows="6" placeholder="Message*" style="width:100%;"></textarea>
+                                              </div>
+                                            </div>
+                                     
+                                      
                       
-                      <p>Tum Piso: Atqui, Cicero, inquit, ista studia, si ad imitandos summos viros spectant, ingeniosorum sunt; Cum autem assumpta ratío est, tanto in dominatu locatur, ut omnia illa prima naturae hulus tutelae subiciantur. Audeo dicere, inquit. Equidem soleo etiam quod uno Graeci, si aliter non possum, idem pluribus verbis exponere. Itaque mihi non satis videmini considerare quod iter sit naturae quaeque progressio. Explanetur igitur. Roges enim Aristonem, bonane ei videantur haec: vacuitas doloris, divitiae, valitudo; Et si turpitudinem fugimus in statu et motu corporis, quid est cur pulchritudinem non sequamur? Ex quo intellegitur officium medium quiddam esse, quod neque in bonis ponatur neque in contrariis. Deinde non quaerimus, quid obscuretur aut intereat, quia sit admodum parvum, sed quid tale sit, ut expleat summam. Quod maxime efficit Theophrasti de beata vita liber, in quo multum admodum fortunae datur. <a href="http://loripsum.net/" target="_blank">Et nemo nimium beatus est;</a> Quid enim de amicitia statueris utilitatis causa expetenda vides. <i>Quod cum dixissent, ille contra.</i> Quae diligentissime contra Aristonem dicuntur a Chryippo. </p>
-                      
-                      <ul>
-                        <li>Ut optime, secundum naturam affectum esse possit.</li>
-                        <li>Dici enim nihil potest verius.</li>
-                        <li>Quamquam tu hanc copiosiorem etiam soles dicere.</li>
-                        <li>Deinde, ubi erubuit-vis enim est permagna naturae-, confugit illuc, ut neget accedere quicquam posse ad voluptatem nihil dolentis.</li>
-                        <li>Cupit enim dícere nihil posse ad beatam vitam deesse sapienti.</li>
-                      </ul>
-                      
-                      
-                      
+                                    </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Send</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>';
+                          echo '</div>';
+                      }
+                      }
+                      ?>
                     
-                    
+
+
+                    </div>
                     </div>
                 </div>
               </div>
@@ -226,3 +360,4 @@
     <script src="/js/bootstrap.min.js"></script>
     </body>
 </html>
+

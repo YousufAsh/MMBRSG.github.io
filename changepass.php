@@ -4,13 +4,14 @@ session_start();
 include('../connect.php');
 error_reporting(0);
 $emailPN = $_SESSION['Alumniemail'];
-$Alumnipassword = $_POST['AlumniPassword'];
+$Alumnipassword = $_SESSION['AlumniPassword'];
 $NewApassword = $_POST['NewAlumniPassword'];
 $Confirmpassword = $_POST['ConfirmNewAlumniPassword'];
 print_r($_SESSION);
 
 if($_POST['submit']){
   if($Confirmpassword == $NewApassword){
+    $Alumnipassword=$NewApassword;
       $query="UPDATE `alumni` SET `Apassword`='".$NewApassword."' WHERE `Aemail`='".$emailPN."'";
 //NOTICE: NEED TO ADD THE EMAIL TO BE VARIABLE BASED ON THE LOG IN, THIS WILL NEED SESSIONS
       $result=mysqli_query($conn,$query);
@@ -23,6 +24,7 @@ if($_POST['submit']){
   }
   mysqli_close($conn);
 }
+
 ?>
 
 <html lang="en">
@@ -50,10 +52,42 @@ if($_POST['submit']){
         </div>        
         
 <div class="container" style="height:100vh;">
-    <a href="javascript:history.back()">
+<div class="topBanner">
+  <div><img src="assets/imgs/MBRGI_logo.png"></div>
+  <div><img src="assets/imgs/gov-logo.png"></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<a href="javascript:history.back()">
     <button type="button" class="btn btn-primary btn-lg" style="margin:1%;" >Back</button>
     </a>
-    <div class="test" style=" display:flex; justify-content: center; align-items: center;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <!--Navigation-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="Index.html"  >Update Profile</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="AA.html" >
+                                    Show Alumni
+                                </a>
+</li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="AAServices.html">Show Board Alumni</a>
+                                </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="Events.html" >
+                                    Change E-Mail
+                                </a>
+                            </li>
+                  
+                    </ul>
+                </div>
+            </nav>
+   
+    <div class="test" style=" display:flex; justify-content: center; align-items: center; margin-top:70px;">
     <div class="card text-center" style="width:50%; ">
         <div class="card-header">
        
