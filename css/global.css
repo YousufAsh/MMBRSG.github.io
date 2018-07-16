@@ -236,13 +236,180 @@ width:85%;
     margin-bottom:20px;
 }
 
+/* Registration Form*/
+
+#radioSeperator {
+
+    display:flex;
+    justify-content:space-around;
+}
+/* Events */
+.eventColumn{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    flex-wrap:wrap;
+
+}
+
+.event{
+    display:flex;
+
+}
+
+.eventDetails{
+
+    margin:10px;
+    
+}
+.eventImg{
+    flex-shrink: 0;
+    margin-top:20px;
+    width:180px;
+    height:110px;
 
 
+}
+.eventPic{
+    max-width:100%;
+    max-height:100%;
+}
 
+.eventDate{
+font-size:14px;
+}
 
+.eventName{
+    color: #194d84;
+    font-weight: bold;
+}
 
+.eventDesc{
+    font-size:14px;
+   
+}
 
+.eventDate,.eventName,.eventDesc{
+margin:3px;
+}
 
+.pageNumFtr{
+   
+    margin: 0 auto;
+    margin-top:20px;
+}
+
+/* Board Styling */
+.title{
+    font-size:36px;
+    color: #194d84;
+    width:100%;
+   text-align:center;
+}
+.board{
+    margin-top:50px;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+.member{
+    
+        width:90%;
+    display:flex;
+    margin:50px;
+    margin-top:10px;
+    border-bottom:1px solid #194d84;
+    padding-bottom:30px;
+}
+
+.smallInfo{
+    color:#194d84;
+    margin-left:20px;
+    line-height:20px;
+}
+.profilePic{
+    display:flex;
+    justify-content:center;
+
+margin-bottom:5px;
+width:100px;
+height:120px;
+flex-shrink: 0; 
+
+}
+
+.profpic{
+    max-width:100%;
+max-height:100%;
+}
+.memberBio{
+margin-top:10px;
+color:black;
+
+}
+
+.profile{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    
+}
+
+/* EVENT READ MORE */
+.eventExpand{
+
+}
+.eventBanner{
+
+    width:80%;
+    margin:0 auto;
+    height:250px;
+    background:red;
+}
+
+.eventBio{
+    
+    margin:30px;
+    margin-top:40px;
+}
+.distancer{
+    display:flex;
+    justify-content:space-between;
+    padding-top:15px;
+    padding-bottom:15px;
+    border-bottom:1px solid #194d84;
+}
+.eventDet{
+
+    
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+
+   
+    height:150px;
+    margin: 50px auto;
+   
+}
+#top{
+    border-top:1px solid #194d84;
+    
+
+}
+
+.eventD1,.eventL1,.eventT1{
+    
+    width:40%;
+}
+
+.eventD2,.eventL2,.eventT2{
+    width:60%;
+}
 /*
 -----OVERWRITING BOOTSTRAP.CSS----
 */

@@ -67,18 +67,18 @@ if($_POST['submit']){
                     <ul class="navbar-nav ml-auto">
                       <!--Navigation-->
                         <li class="nav-item">
-                            <a class="nav-link" href="Index.html"  >Update Profile</a>
+                            <a class="nav-link" href="form2.php"  >Update Profile</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="AA.html" >
+                                <a class="nav-link" href="AABoard.php" >
                                     Show Alumni
                                 </a>
 </li>
                                 <li class="nav-item">
-                                        <a class="nav-link" href="AAServices.html">Show Board Alumni</a>
+                                        <a class="nav-link" href="AABoard.php">Show Board Alumni</a>
                                 </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="Events.html" >
+                                <a class="nav-link" href="changeEmail.php" >
                                     Change E-Mail
                                 </a>
                             </li>

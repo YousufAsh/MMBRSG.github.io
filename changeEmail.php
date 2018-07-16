@@ -115,18 +115,18 @@ if(isset($_POST['ShowBoardAlumni'])){
                     <ul class="navbar-nav ml-auto">
                       <!--Navigation-->
                         <li class="nav-item">
-                            <a class="nav-link" href="Index.html"  >Update Profile</a>
+                            <a class="nav-link" href="form2.php"  >Update Profile</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="AA.html" >
+                                <a class="nav-link" href="AABoard.php" >
                                     Show Alumni
                                 </a>
 </li>
                                 <li class="nav-item">
-                                        <a class="nav-link" href="AAServices.html">Show Board Alumni</a>
+                                        <a class="nav-link" href="AABoard.php">Show Board Alumni</a>
                                 </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="Events.html" >
+                                <a class="nav-link" href="changeEmail.php" >
                                     Change E-Mail
                                 </a>
                             </li>
@@ -134,7 +134,6 @@ if(isset($_POST['ShowBoardAlumni'])){
                     </ul>
                 </div>
             </nav>
-   
     <div class="test" style=" display:flex; justify-content: center; align-items: center; margin-top:70px;">
     <div class="card text-center" style="width:50%; ">
         <div class="card-header">

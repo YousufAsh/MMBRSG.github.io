@@ -36,64 +36,9 @@
         <div><img src="assets/imgs/MBRGI_logo.png"></div>
         <div><img src="assets/imgs/gov-logo.png"></div>
       </div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="navbar-brand" href="#">MBRSG AA</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                      <!--Navigation-->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="Index.html" id="navbarDropdown" >About Us</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Objectives.html">Objectives</a>
-                                <a class="dropdown-item" href="Vision.html">Vision</a>
-                                <a class="dropdown-item" href="Mission.html">Mission</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="AA.html" id="navbarDropdown" >
-                                    Alumni AA
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="AAStructure.html">AA Structure</a>
-                                    <a class="dropdown-item" href="AARoles.html">AA Roles & Responsiblities</a>
-                                    <a class="dropdown-item" href="AABoard.html">AA Board</a>
-                                    <a class="dropdown-item" href="AAEligibility.html">Eligibility</a>
-                                    <a class="dropdown-item" href="AARegulations.html">Regulations and bylaws</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="AAServices.html">AA Services</a>
-                                </li>
-                        <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="Events.html" id="navbarDropdown" >
-                                    Events
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="PEvents.html">Previous Events</a>
-                                    <a class="dropdown-item" href="UEvents.html">Upcoming Events</a>
-
-                            </li>
-                        <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="Graduates.html" id="navbarDropdown" >
-                                        Graduates
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="DGrads.html">Distinguished Graduates</a>
-                                        <a class="dropdown-item" href="AddEmail.php">Registration to ALUMNI</a>
-    
-                                </li>
-                        <li class="nav-item">
-                                <a class="nav-link" href="Newsletter.html">Newsletter</a>
-                        </li>
-                        <li class="nav-item">
-                                <a class="nav-link" href="ContactUs.html">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            
+          <?php
+include_once("nav.php");
+?>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -147,9 +92,9 @@
                   <div class="tab-pane fade show active content" role="tabpanel">
                   <div class="title">MBRSG AA Board Members</div> 
                     <div class="board">
-               
+               <!--
                     <?php
-                      $sql="SELECT * FROM `alumni`";
+                    /*  $sql="SELECT * FROM `alumni`";
                       $result = mysqli_query($conn, $sql);
                      // echo "<tr><td colspan='2'><h3>Executive Board Members</h3></td></tr>";
                       while ($row = mysqli_fetch_array($result)) {
@@ -157,7 +102,7 @@
                           $folder=$row['Apicture'];
                           $AProfilePic= "<img src='".$folder."' height='120' width='100'/>";
                           echo '<div class="member">';
-                          echo '<div class="profilePic"><img src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg"></div>';
+                          echo '<div class="profilePic"><img class="profpic" src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg"></div>';
                           echo '<div class="row1"><b>'.$row['AFname'].' '.$row['ALname'].'</b></div>';
                           echo '<div class="row1">'.$row['Amajor'].'</div>';
                           echo '<div class="row1">'.$row['Adesignation'].', '.$row['Acompany'].'</div>';
@@ -216,79 +161,57 @@
                         </div>';
                           echo '</div>';
                       }
-                      }
+                      }*/ 
                       ?>
-                                        <div class="title">MBRSG AA Honorary  Members</div> 
-                      <?php 
-                      $sql="SELECT * FROM `alumni`";
-                      $result = mysqli_query($conn, $sql);
-                     
-                      while ($row = mysqli_fetch_array($result)) {
-                        if($row['checkbox']=="Honor"){
-                          $folder=$row['Apicture'];
-                          $AProfilePic= "<img src='".$folder."' height='100' width='100'/>";
-                          echo '<div class="member">';
-                          echo '<div class="profilePic"><img src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg"></div>';
-                          echo '<div class="row1"><b>'.$row['AFname'].' '.$row['ALname'].'</b></div>';
-                          echo '<div class="row1">'.$row['Amajor'].'</div>';
-                          echo '<div class="row1">'.$row['Adesignation'].', '.$row['Acompany'].'</div>';
-                          echo '
-                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin:0 auto; margin-top:5px;">
-                          Contact '.$row['AFname'].'
-                        </button>
+                    -->
+                          <div class="member">
+                          <div class="profile">
 
-                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
+                          <div class="profilePic">
+                            <img class="profpic" src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg">
+                          </div>
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin:0 auto;">
+                              Contact
+                            </button>
+                        </div>
+                          <div class="smallInfo">
+                            <div class="row1"><b>Youssef Ashraf</b></div>
+                          <div class="row1">Computer Science</div>
+                          <div class="row1">Intern, MBRSG</div>
+                          <div class="memberBio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Torquatus, is qui consul cum Cn. Duo Reges: constructio interrete. Non pugnem cum homine, cur tantum habeat in natura boni; Quis contra in illa aetate pudorem, constantiam, etiamsi sua nihil intersit, non tamen diligat? Simus igitur contenti his.</div>
+                          </div>
+                        </div>
+                          <div class="member">
+                            <div class="profile">
+                              <div class="profilePic"><img class="profpic" src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg"></div>
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin:0 auto;">
+                                  Contact
                                 </button>
-                              </div>
-                              <div class="modal-body">
-                                  <form>
-                                      <div class="form-group row">
-                                        <div class="col-sm-10">
-                                          <input type="text" class="form-control" placeholder="Name*">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="inputPassword3" placeholder="Company*">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                          <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputPassword3" placeholder="Designation*">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <div class="col-sm-10">
-                                              <input type="text" class="form-control" id="inputPassword3" placeholder="Email*">
-                                            </div>
-                                          </div>
-                                          <div class="form-group row">
-                                              <div class="col-sm-10">
-                                               <textarea rows="6" placeholder="Message*" style="width:100%;"></textarea>
-                                              </div>
-                                            </div>
-                                     
-                                      
-                      
-                                    </form>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary">Send</button>
+                            </div>
+                            
+                              <div class="smallInfo">
+                                <div class="row1"><b>Youssef Ashraf</b></div>
+                              <div class="row1">Computer Science</div>
+                              <div class="row1">Intern, MBRSG</div>
+                              <div class="memberBio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Torquatus, is qui consul cum Cn. Duo Reges: constructio interrete. Non pugnem cum homine, cur tantum habeat in natura boni; Quis contra in illa aetate pudorem, constantiam, etiamsi sua nihil intersit, non tamen diligat? Simus igitur contenti his.</div>
                               </div>
                             </div>
+                          <div class="member">
+                            <div class="profile">
+                          <div class="profilePic"><img class="profpic" src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg"></div>
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin:0 auto;">
+                              Contact
+                            </button>
                           </div>
-                        </div>';
-                          echo '</div>';
-                      }
-                      }
-                      ?>
+                          <div class="smallInfo">
+                            <div class="row1"><b>Youssef Ashraf</b></div>
+                          <div class="row1">Computer Science</div>
+                          <div class="row1">Intern, MBRSG</div>
+                          <div class="memberBio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Torquatus, is qui consul cum Cn. Duo Reges: constructio interrete. Non pugnem cum homine, cur tantum habeat in natura boni; Quis contra in illa aetate pudorem, constantiam, etiamsi sua nihil intersit, non tamen diligat? Simus igitur contenti his. </div>
+                          </div>
+                        </div>
+                          
+
                     
 
 
