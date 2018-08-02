@@ -9,9 +9,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="Index.php" id="navbarDropdown" >About Us</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Objectives.php">Objectives</a>
-                                <a class="dropdown-item" href="Vision.php">Vision</a>
-                                <a class="dropdown-item" href="Mission.php">Mission</a>
+                                <a class="dropdown-item" href="Objectives.php">By-laws & Constitution </a>
+                                <a class="dropdown-item" href="Vision.php">Executive Board</a>
+                                <a class="dropdown-item" href="Mission.php">Membership Eligibility</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">

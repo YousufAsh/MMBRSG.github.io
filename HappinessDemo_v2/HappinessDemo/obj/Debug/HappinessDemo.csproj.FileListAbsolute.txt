@@ -1,0 +1,25 @@
+C:\inetpub\wwwroot\IISSites\HappinessDemo\HappinessDemo\bin\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\HappinessDemo\HappinessDemo\bin\HappinessDemo.pdb
+C:\inetpub\wwwroot\IISSites\HappinessDemo\HappinessDemo\obj\Debug\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\HappinessDemo\HappinessDemo\obj\Debug\HappinessDemo.pdb
+C:\inetpub\wwwroot\IISSites\HappinessDemo\HappinessDemo\obj\Debug\HappinessDemo.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\IISSites\New folder\HappinessDemo\HappinessDemo\bin\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\New folder\HappinessDemo\HappinessDemo\bin\HappinessDemo.pdb
+C:\inetpub\wwwroot\IISSites\New folder\HappinessDemo\HappinessDemo\obj\Debug\HappinessDemo.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\IISSites\New folder\HappinessDemo\HappinessDemo\obj\Debug\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\New folder\HappinessDemo\HappinessDemo\obj\Debug\HappinessDemo.pdb
+C:\inetpub\wwwroot\IISSites\HappinessDemo_Old\HappinessDemo\bin\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\HappinessDemo_Old\HappinessDemo\bin\HappinessDemo.pdb
+C:\inetpub\wwwroot\IISSites\HappinessDemo_Old\HappinessDemo\obj\Debug\HappinessDemo.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\IISSites\HappinessDemo_Old\HappinessDemo\obj\Debug\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\HappinessDemo_Old\HappinessDemo\obj\Debug\HappinessDemo.pdb
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v1_Api\HappinessDemo\bin\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v1_Api\HappinessDemo\bin\HappinessDemo.pdb
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v1_Api\HappinessDemo\obj\Debug\HappinessDemo.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v1_Api\HappinessDemo\obj\Debug\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v1_Api\HappinessDemo\obj\Debug\HappinessDemo.pdb
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v2\HappinessDemo\bin\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v2\HappinessDemo\bin\HappinessDemo.pdb
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v2\HappinessDemo\obj\Debug\HappinessDemo.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v2\HappinessDemo\obj\Debug\HappinessDemo.dll
+C:\inetpub\wwwroot\IISSites\HappinessDemo_v2\HappinessDemo\obj\Debug\HappinessDemo.pdb

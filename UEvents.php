@@ -27,12 +27,14 @@
         <a href="#"><img class="sIcon" src="assets/icons/if_icon-instagram-material-design_3116887.png"></a>
         </div>        
 
-<div class="container" >
+<div class="container-fluid" >
     <div class="topBanner">
         <div><img src="assets/imgs/MBRGI_logo.png"></div>
         <div><img src="assets/imgs/gov-logo.png"></div>
       </div>
-      <?php
+      </div>
+<div class="container-fluid" style="width:100%; margin:0; padding:0;">
+<?php
 include_once("nav.php");
 ?>
             
@@ -57,12 +59,21 @@ include_once("nav.php");
                   <span class="sr-only">Next</span>
                 </a>
               </div> 
-             
+</div>
+<div class="sidebar">
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-facebook-material-design_3116888.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-linkedin-material-design_3116886.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-twitter-material-design_3116885.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-youtube-material-design_3116882.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-email-material-design_3116889.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-instagram-material-design_3116887.png"></a>
+        </div>      
+<div class="container">
               <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                        <!-- Change active relative to current webpage -->
                       <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="Events.html">Events</a></li>
+                      <li class="breadcrumb-item"><a href="Events.php">Events</a></li>
                       <li class="breadcrumb-item active" aria-current="page" id="breadcrumbCurrent">Upcoming Events</li>
                       </ol>
                   </nav>
@@ -71,11 +82,11 @@ include_once("nav.php");
                 <div class="col-4">
               <div class="list-group">
                 <!-- Change active relative to current webpage -->
-                <a href="Events.html" class="list-group-item list-group-item-action">
+                <a href="Events.php" class="list-group-item list-group-item-action">
                   Events
                 </a>
-                <a href="PEvents.html" class="list-group-item list-group-item-action">Previous Events</a>
-                <a href="UEvents.html" class="list-group-item list-group-item-action active" id="main">Upcoming Events</a>
+                <a href="PEvents.php" class="list-group-item list-group-item-action">Previous Events</a>
+                <a href="UEvents.php" class="list-group-item list-group-item-action active" id="main">Upcoming Events</a>
                
 
               </div>
@@ -237,60 +248,10 @@ for ($page=1;$page<=$number_of_pages;$page++)
               </div>
               </div>
 </div>
-<div id="ftr" class="container-fluid" style="margin-top:1px; background: url(http://mbrsg.ae/MBRSG/media/VideoGallery/bg_footernew_1.jpg?width=101&height=99&ext=.jpg) repeat scroll center top #2e2e2e;">
-  <div class="container">
-    <div id="footer">
-      
-      <div class="footerContent">
-        <h4 class="footerTitle">Newsletter Subscribe</h4>
-        <div class="footerText">
-          Subscribe to our newsletter and get the latest updates and information on MBRSG right into your inbox!
-          <br>
-          <div class="newsletterSubmition">
-          <input class="email" type="email" placeholder="Your email...">
-          <input type="submit" class="submit" value="Submit">
-          </div>
-        </div>
-      </div>
-      <div class="footerContent">
-          <h4 class="footerTitle">Contact Us</h4>
-          <div class="footerText">
-              <div class="noStyle">
-             <div class="listContainer"><div class="seperator"><img class="contactIcon" src="assets/icons/map-5-512.png"></div>Convention Tower, Level 13 Dubai, UAE</div>
-              <div class="listContainer"><div class="seperator"><img class="contactIcon" src="assets/icons/phone-54-512.png"></div>Tel: +971 4 329 3290</div>
-              <div class="listContainer"><div class="seperator"><img class="contactIcon" src="assets/icons/clock-3-512.png"></div>Mon-Fri: 10-20<br>Sun: 12-16</div>
-            </div>
-           </div>
-        </div>
-      <div class="footerContent">
-          <h4 class="footerTitle">Navigate</h4>
-          <div class="footerText">
-            <ul class="footerNavigation">
-              <li>About Us</li>
-              <li>Alumni Association</li>
-              <li>AA Services</li>
-              <li>Events</li>
-              <li>Graduates</li>
-              <li>Newsletter</li>
-              <li>Contact Us</li>
-              </ul>
-            </div>
-          </div>
-        </div>   
-        <div class="endFtr">
-            <div class="endFtrContent">
-              <span>© 2018 MBRSG All Rights Reserved</span>
-              <a href="#"><span>Library</span></a>
-              <a href="#"><span>Blackboard</span></a>
-              <a href="#"><span>Sitemap</span></a>
-              <a href="#"><span>FAQ</span></a>
-              <a href="#"><span>Privacy Policy</span></a>
-              <a href="#"><span>Disclaimer</span></a>
-            </div>
-        </div>
-        
-      </div>
-    </div>
+<?php
+include_once("ftr.php");
+?>
+
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

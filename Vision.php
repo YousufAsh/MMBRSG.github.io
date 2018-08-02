@@ -28,9 +28,12 @@
         <div><img src="assets/imgs/MBRGI_logo.png"></div>
         <div><img src="assets/imgs/gov-logo.png"></div>
       </div>
-      <?php
+      </div>
+<div class="container-fluid" style="width:100%; margin:0; padding:0;">
+<?php
 include_once("nav.php");
 ?>
+            
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -52,13 +55,22 @@ include_once("nav.php");
                   <span class="sr-only">Next</span>
                 </a>
               </div> 
-             
+</div>
+<div class="sidebar">
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-facebook-material-design_3116888.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-linkedin-material-design_3116886.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-twitter-material-design_3116885.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-youtube-material-design_3116882.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-email-material-design_3116889.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-instagram-material-design_3116887.png"></a>
+        </div>      
+<div class="container">
               <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                        <!-- Change active relative to current webpage -->
                       <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="Index.html">About Us</a></li>
-                      <li class="breadcrumb-item active" aria-current="page" id="breadcrumbCurrent">Vision</li>
+                      <li class="breadcrumb-item"><a href="Index.php">About Us</a></li>
+                      <li class="breadcrumb-item active" aria-current="page" id="breadcrumbCurrent">Executive Board</li>
                     </ol>
                   </nav>
 
@@ -66,12 +78,12 @@ include_once("nav.php");
                 <div class="col-4">
               <div class="list-group">
                 <!-- Change active relative to current webpage -->
-                <a href="Index.html" class="list-group-item list-group-item-action">
+                <a href="Index.php" class="list-group-item list-group-item-action">
                   About Us
                 </a>
-                <a href="Objectives.html" class="list-group-item list-group-item-action">Objectives</a>
-                <a href="Vision.html" class="list-group-item list-group-item-action active" id="main">Vision</a>
-                <a href="Mission.html" class="list-group-item list-group-item-action">Mission</a>
+                <a href="Objectives.php" class="list-group-item list-group-item-action">By-laws & Constition</a>
+                <a href="Vision.php" class="list-group-item list-group-item-action active" id="main">Executive Board</a>
+                <a href="Mission.php" class="list-group-item list-group-item-action">Membership Eligbility</a>
 
               </div>
                 </div>
@@ -79,73 +91,34 @@ include_once("nav.php");
                 <div class="tab-content" id="nav-tabContent">
                   <!-- Content changes -->
                   <div class="tab-pane fade" role="tabpanel" ></div>
-                  <div class="tab-pane fade show active content" role="tabpanel"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="http://loripsum.net/" target="_blank">Hic nihil fuit, quod quaereremus.</a> Nam nisi hoc optineatur, id solum bonum esse, quod honestum sit, nullo modo probari possit beatam vitam virtute effici. Oculorum, inquit Plato, est in nobis sensus acerrimus, quibus sapientiam non cernimus. Duo Reges: constructio interrete. Et harum quidem rerum facilis est et expedita distinctio. <a href="http://loripsum.net/" target="_blank">Certe, nisi voluptatem tanti aestimaretis.</a> Rem unam praeclarissimam omnium maximeque laudandam, penitus viderent, quonam gaudio complerentur, cum tantopere eius adumbrata opinione laetentur? <i>Negat enim summo bono afferre incrementum diem.</i> Tum ille: Tu autem cum ipse tantum librorum habeas, quos hic tandem requiris? Si longus, levis dictata sunt. </p>
-
-                    <p><i>Et ille ridens: Video, inquit, quid agas;</i> Qua tu etiam inprudens utebare non numquam. <i>Maximus dolor, inquit, brevis est.</i> Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis locis indicia summorum virorum, tamen ego illa moveor exhedra. Quis, quaeso, inquit, est, qui quid sit voluptas nesciat, aut qui, quo magis id intellegat, definitionem aliquam desideret? Quod autem in homine praestantissimum atque optimum est, id deseruit. Ita fit illa conclusio non solum vera, sed ita perspicua, ut dialectici ne rationem quidem reddi putent oportere: si illud, hoc; At negat Epicurus-hoc enim vestrum lumen estquemquam, qui honeste non vivat, iucunde posse vivere. <a href="http://loripsum.net/" target="_blank">Verba tu fingas et ea dicas, quae non sentias?</a> Iam quae corporis sunt, ea nec auctoritatem cum animi partibus, comparandam et cognitionem habent faciliorem. Quod cum ita sit, perspicuum est omnis rectas res atque laudabilis eo referri, ut cum voluptate vivatur. Itaque ne iustitiam quidem recte quis dixerit per se ipsam optabilem, sed quia iucunditatis vel plurimum afferat. <mark>Quid est igitur, inquit, quod requiras?</mark> Quid igitur, inquit, eos responsuros putas? </p>
-                    
-                    
-                    </div>
+                  <div class="tab-pane fade show active content" role="tabpanel"> 
+                 <p>
+                    The Executive Board governs the MBRSG Alumni Association, maintaining and overseeing the implementation and priorities of the Association’s Constitution and By-laws. Executive Board Members also perform other functions as required and approved by the School Council and comprise six members: 
+                 </p>
+                 <p><b>President:</b></p>
+                 <p>The President represents the Association’s Executive Board and members and reports their needs so that they may be addressed. The President consults with the Executive Board and recommend additional committees, or nominate members to the Board in line with the Constitution and By-laws.  He/she shall chair all meetings of the MBRSGAA and shall represent the MBRSG in the School community, or designate other persons to represent the Association as necessary. The President, in partnership with the Director of Advancement, shall set annual goals for the MBRSGAA, propose a plan for meeting these annual goals, and organize the agenda of the Executive Board and the MBRSGAA members in a manner consistent with meeting these objectives.</p>
+                <p><b>Vice President: </b></p>
+                <p>
+                The Vice President shall act as the MBRSGAA President in his/her absence and shall have the powers and duties of the President. In the event of a vacancy in the Office of President, the Vice President shall succeed to that office for the unexpired portion of the term. A Vice President who has succeeded to the office of President in this manner may stand for election to a full term as President in the next election cycle. The Vice President will work with the Director of Advancement to review and make recommendations concerning the Association and its members. The Vice President shall also have general duties as may be assigned from time to time by the MBRSGAA Executive Board.
+                </p> 
+                <p><b>Treasurer:</b></p>
+                <p>The Treasurer shall work with the MBRSG Alumni Affairs Department to prepare annual budgets for the MBRSGAA and maintain up-to-date records of budgets, expenditures, and funds.</p>
+                <p><b>Executive Secretary:</b></p>
+                <p>The Executive Secretary shall be responsible for managing all official communications for the MBRSGAA and its members to the School and the relevant publics. He/she will also keep a roll of the Executive Board Members including a record of their attendance at all meetings. </p>
+                <p><b>Executive Administrator:</b></p>
+                <p>The Executive Administrator is responsible for documenting all meetings and coordinating duties allocated to the Executive Board and other MBRSGAA members.</p>
+                <p><b>Director of Advancement: </b></p>
+                <p>The Director of Advancement for the MBRSGAA shall be appointed by the School Council and shall represent the Council and the MGRSGAA Executive Board, acting as the Chief Operating Officer of the MBRSGAA. In his/her role as the Director of Advancement for the MBRSG Alumni Association, he/she will represent the interest of the members to the School and maintain a record of all meetings and activities.</p>
+              </div>
                   <div class="tab-pane fade" role="tabpanel" >...</div>
                   <div class="tab-pane fade" role="tabpanel" >...</div>
                 </div>
               </div>
               </div>
-</div>
-<div id="ftr" class="container-fluid" style="margin-top:1px; background: url(http://mbrsg.ae/MBRSG/media/VideoGallery/bg_footernew_1.jpg?width=101&height=99&ext=.jpg) repeat scroll center top #2e2e2e;">
-  <div class="container">
-    <div id="footer">
-      
-      <div class="footerContent">
-        <h4 class="footerTitle">Newsletter Subscribe</h4>
-        <div class="footerText">
-          Subscribe to our newsletter and get the latest updates and information on MBRSG right into your inbox!
-          <br>
-          <div class="newsletterSubmition">
-          <input class="email" type="email" placeholder="Your email...">
-          <input type="submit" class="submit" value="Submit">
-          </div>
-        </div>
-      </div>
-      <div class="footerContent">
-          <h4 class="footerTitle">Contact Us</h4>
-          <div class="footerText">
-              <div class="noStyle">
-             <div class="listContainer"><div class="seperator"><img class="contactIcon" src="assets/icons/map-5-512.png"></div>Convention Tower, Level 13 Dubai, UAE</div>
-              <div class="listContainer"><div class="seperator"><img class="contactIcon" src="assets/icons/phone-54-512.png"></div>Tel: +971 4 329 3290</div>
-              <div class="listContainer"><div class="seperator"><img class="contactIcon" src="assets/icons/clock-3-512.png"></div>Mon-Fri: 10-20<br>Sun: 12-16</div>
-            </div>
-           </div>
-        </div>
-      <div class="footerContent">
-          <h4 class="footerTitle">Navigate</h4>
-          <div class="footerText">
-            <ul class="footerNavigation">
-              <li>About Us</li>
-              <li>Alumni Association</li>
-              <li>AA Services</li>
-              <li>Events</li>
-              <li>Graduates</li>
-              <li>Newsletter</li>
-              <li>Contact Us</li>
-              </ul>
-            </div>
-          </div>
-        </div>   
-        <div class="endFtr">
-            <div class="endFtrContent">
-              <span>© 2018 MBRSG All Rights Reserved</span>
-              <a href="#"><span>Library</span></a>
-              <a href="#"><span>Blackboard</span></a>
-              <a href="#"><span>Sitemap</span></a>
-              <a href="#"><span>FAQ</span></a>
-              <a href="#"><span>Privacy Policy</span></a>
-              <a href="#"><span>Disclaimer</span></a>
-            </div>
-        </div>
-        
-      </div>
-    </div>
-
+                    </div>
+                    <?php
+include_once("ftr.php");
+?>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/js/jquery.min.js"></script>

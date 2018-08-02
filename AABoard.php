@@ -36,9 +36,12 @@
         <div><img src="assets/imgs/MBRGI_logo.png"></div>
         <div><img src="assets/imgs/gov-logo.png"></div>
       </div>
-          <?php
+      </div>
+<div class="container-fluid" style="width:100%; margin:0; padding:0;">
+<?php
 include_once("nav.php");
 ?>
+            
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -60,12 +63,21 @@ include_once("nav.php");
                   <span class="sr-only">Next</span>
                 </a>
               </div> 
-             
+</div>
+<div class="sidebar">
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-facebook-material-design_3116888.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-linkedin-material-design_3116886.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-twitter-material-design_3116885.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-youtube-material-design_3116882.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-email-material-design_3116889.png"></a>
+        <a href="#"><img class="sIcon" src="assets/icons/if_icon-instagram-material-design_3116887.png"></a>
+        </div>      
+<div class="container">
               <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                        <!-- Change active relative to current webpage -->
                       <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item "><a href="AA.html">Alumni Association</a></li>
+                      <li class="breadcrumb-item "><a href="AA.php">Alumni Association</a></li>
                       <li class="breadcrumb-item active" aria-current="page" id="breadcrumbCurrent">AA Board</li>
                     </ol>
                   </nav>
@@ -74,14 +86,14 @@ include_once("nav.php");
                 <div class="col-4">
               <div class="list-group">
                 <!-- Change active relative to current webpage -->
-                <a href="AA.html" class="list-group-item list-group-item-action">
+                <a href="AA.php" class="list-group-item list-group-item-action">
                   Alumni Association
                 </a>
-                <a href="AAStructure.html" class="list-group-item list-group-item-action">AA Structure</a>
-                <a href="AARoles.html" class="list-group-item list-group-item-action">AA Roles & Responsiblities</a>
-                <a href="AABoard.html" class="list-group-item list-group-item-action active " id="main">AA Board</a>
-                <a href="AAEligibility.html" class="list-group-item list-group-item-action">Eligbility</a>
-                <a href="AARegulations.html" class="list-group-item list-group-item-action">Regulations & Bylaws</a>
+                <a href="AAStructure.php" class="list-group-item list-group-item-action">AA Structure</a>
+                <a href="AARoles.php" class="list-group-item list-group-item-action">AA Roles & Responsiblities</a>
+                <a href="AABoard.php" class="list-group-item list-group-item-action active " id="main">AA Board</a>
+                <a href="AAEligibility.php" class="list-group-item list-group-item-action">Eligbility</a>
+                <a href="AARegulations.php" class="list-group-item list-group-item-action">Regulations & Bylaws</a>
 
               </div>
                 </div>
@@ -168,32 +180,49 @@ include_once("nav.php");
                           <div class="profile">
 
                           <div class="profilePic">
-                            <img class="profpic" src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg">
+                            <img class="profpic" src="assets/imgs/Hany-Profile pic.JPG">
                           </div>
                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin:0 auto;">
                               Contact
                             </button>
                         </div>
                           <div class="smallInfo">
-                            <div class="row1"><b>Youssef Ashraf</b></div>
-                          <div class="row1">Computer Science</div>
-                          <div class="row1">Intern, MBRSG</div>
-                          <div class="memberBio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Torquatus, is qui consul cum Cn. Duo Reges: constructio interrete. Non pugnem cum homine, cur tantum habeat in natura boni; Quis contra in illa aetate pudorem, constantiam, etiamsi sua nihil intersit, non tamen diligat? Simus igitur contenti his.</div>
+                            <div class="row1"><b>Hany Samir, President</b></div>
+                          <div class="row1">Policy and Research Specialist, MOHRE</div>
+                          <div class="row1">Masters of Public Administration, 2011</div>
+                          <div class="memberBio">
+
+<p>Hany Samir is the president of ALUMNI Association Board at Mohammed Bin Rashid School of Government (MBRSG). Hany holds MPA (Master of Public Administration) from MBRSG (formerly known as Dubai School of Government) in cooperation with Harvard Kennedy School. His bachelor degree is in Economics from Faculty of Economics and Political science (English section) at Cairo University.</p>
+
+<p>Hany is an experienced public policy consultant with around 10 years of experience in research and public policy analysis. He conducted many researches covering wide spectrum of public sector aspects including labour economics, trade, investment, and economic development.</p>
+
+<p>Currently, he is working as policy and research specialist at policy and research department of the Ministry of Human Resources and Emiratisation (MOHRE). Prior joining MOHRE, He worked as research manager at public sector department of Kantar TNS in their UAE office. In addition, he worked in research for the following organizations in Egypt: the Australian Embassy in Cairo, Office of the Minister of Trade and industry, Office of the Minister of Investment, and Office of the Minister of Communications and Information Technology.</p>
+
+<p>It is worth mentioning that Hany joined UNDP and GIZ teams to manage two key projects for the Egyptian government, which tacked the adoption of Results Based Management System in the government, besides the reform of HR departments in the public sector.  </p>
+
+<p>Hany has proven his strong expertise in qualitative research, data analysis, comparative studies, organizational development, strategic planning, and performance management.
+
+
+</div>
                           </div>
                         </div>
                           <div class="member">
                             <div class="profile">
-                              <div class="profilePic"><img class="profpic" src="https://exodusmoving.com/wp-content/uploads/2016/08/profile-filler-female.jpg"></div>
+                              <div class="profilePic"><img class="profpic" src="assets/imgs/633B9401.jpg"></div>
                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin:0 auto;">
                                   Contact
                                 </button>
                             </div>
                             
                               <div class="smallInfo">
-                                <div class="row1"><b>Youssef Ashraf</b></div>
-                              <div class="row1">Computer Science</div>
-                              <div class="row1">Intern, MBRSG</div>
-                              <div class="memberBio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Torquatus, is qui consul cum Cn. Duo Reges: constructio interrete. Non pugnem cum homine, cur tantum habeat in natura boni; Quis contra in illa aetate pudorem, constantiam, etiamsi sua nihil intersit, non tamen diligat? Simus igitur contenti his.</div>
+                                <div class="row1"><b>Humaid AlShamsi – Executive Secretary</b></div>
+                              <div class="row1">Project Manager, Executive Council of Dubai</div>
+                              <div class="row1">Masters of Public Administration, 2017</div>
+                              <div class="memberBio">
+
+<p>Humaid AlShamsi is a Project Manager at The Executive Council of Dubai, where Humaid manages different type of projects aim of focusing the efforts of different government entities to create the necessary positive change in their services, and to add new, pioneering and unprecedented dimensions of excellence to government services delivery, contributing by that to the achievement of the service improvement and supporting the sustainable growth and development of cities in all sectors. He supports the government’s commitment to providing a better life to its customers from all segments and in all areas.</p>
+<p>He graduated from MBRSG with Master of Public Administration and bachelor of Computer Engineering from Khalifa University of Science and Technology.</p>
+</div>
                               </div>
                             </div>
                           <div class="member">
@@ -221,60 +250,9 @@ include_once("nav.php");
               </div>
               </div>
 </div>
-<div id="ftr" class="container-fluid" style="margin-top:1px; background: url(http://mbrsg.ae/MBRSG/media/VideoGallery/bg_footernew_1.jpg?width=101&height=99&ext=.jpg) repeat scroll center top #2e2e2e;">
-  <div class="container">
-    <div id="footer">
-      
-      <div class="footerContent">
-        <h4 class="footerTitle">Newsletter Subscribe</h4>
-        <div class="footerText">
-          Subscribe to our newsletter and get the latest updates and information on MBRSG right into your inbox!
-          <br>
-          <div class="newsletterSubmition">
-          <input class="email" type="email" placeholder="Your email...">
-          <input type="submit" class="submit" value="Submit">
-          </div>
-        </div>
-      </div>
-      <div class="footerContent">
-          <h4 class="footerTitle">Contact Us</h4>
-          <div class="footerText">
-              <div class="noStyle">
-             <div class="listContainer"><div class="seperator"><img class="contactIcon" src="assets/icons/map-5-512.png"></div>Convention Tower, Level 13 Dubai, UAE</div>
-              <div class="listContainer"><div class="seperator"><img class="contactIcon" src="assets/icons/phone-54-512.png"></div>Tel: +971 4 329 3290</div>
-              <div class="listContainer"><div class="seperator"><img class="contactIcon" src="assets/icons/clock-3-512.png"></div>Mon-Fri: 10-20<br>Sun: 12-16</div>
-            </div>
-           </div>
-        </div>
-      <div class="footerContent">
-          <h4 class="footerTitle">Navigate</h4>
-          <div class="footerText">
-            <ul class="footerNavigation">
-              <li>About Us</li>
-              <li>Alumni Association</li>
-              <li>AA Services</li>
-              <li>Events</li>
-              <li>Graduates</li>
-              <li>Newsletter</li>
-              <li>Contact Us</li>
-              </ul>
-            </div>
-          </div>
-        </div>   
-        <div class="endFtr">
-            <div class="endFtrContent">
-              <span>© 2018 MBRSG All Rights Reserved</span>
-              <a href="#"><span>Library</span></a>
-              <a href="#"><span>Blackboard</span></a>
-              <a href="#"><span>Sitemap</span></a>
-              <a href="#"><span>FAQ</span></a>
-              <a href="#"><span>Privacy Policy</span></a>
-              <a href="#"><span>Disclaimer</span></a>
-            </div>
-        </div>
-        
-      </div>
-    </div>
+<?php
+include_once("ftr.php");
+?>
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
